@@ -8,7 +8,8 @@
 
 - name: Download Terraform
   ansible.builtin.get_url:
-    url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip"
+#    url: "https://releases.hashicorp.com/terraform/{{ terraform_version }}/terraform_{{ terraform_version }}_linux_{{ terraform_arch }}.zip"
+    url: "http://build-engineers-03.vlabs/terraform_1.12.1_linux_amd64.zip"
     dest: /tmp/terraform.zip
   when: build_terraform is not defined
 

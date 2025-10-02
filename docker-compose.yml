@@ -24,6 +24,7 @@ services:
       context: .
     environment:
       CELERY_CONFIG_PATH: "/celery_config.yaml"
+      ALL_PROXY: "socks5://Cm0acWgW6D:R3dqDwpyD2@45.129.185.81:10162"
     command: "celery -A alts.worker.app worker -Q docker-x86_64-0
               --pool=threads --concurrency=20 --loglevel=INFO"
     privileged: true
