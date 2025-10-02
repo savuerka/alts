@@ -24,8 +24,9 @@ EOT
 # Install Terraform
 RUN <<EOT
   set -ex
-  dnf install curl -y
-  curl -O http://build-engineers-03.vlabs/terraform
+  dnf update -y
+  dnf install wget -y
+  wget http://build-engineers-03.vlabs/terraform
   chmod a+x terraform
   mv ./terraform /usr/local/bin/
   mkdir -p /root/.terraform.d/plugin-cache
